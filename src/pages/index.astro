@@ -1,0 +1,39 @@
+---
+import MainPageLayout from "../layouts/MainPageLayout.astro";
+---
+
+<MainPageLayout title={"Moin!"}>
+    <!-- Hero-Box -->
+    <div class="w-screen">
+        <div
+            class="py-20 min-h-screen text-gray-100 bg-gradient-to-b from-indigo-600 via-pink-400"
+        >
+            <div class="text-8xl md:text-9xl font-extrabold text-center">
+                Moin!
+            </div>
+            <img
+                src="/profile-picture.webp"
+                class="w-48 h-48 md:w-64 md:h-64 mx-auto my-24 object-cover rounded-full"
+            />
+            <div
+                class="text-xl md:text-2xl font-semibold mx-7 lg:mx-auto max-w-screen-lg text-center"
+            >
+                My name is <a href="/about-me">Erik</a>, I am a coffee lover
+                ☕️, tech enthusiast 💻, <a href="/cv">product owner 👨🏼‍💻</a>, <a
+                    href="/projects">DIY-guy 🛠</a
+                > and addicted to learning 🤓
+            </div>
+        </div>
+    </div>
+    <div class="w-screen">Test</div>
+</MainPageLayout>
+
+<style>
+    a {
+        text-decoration: underline dotted 1.5px;
+    }
+
+    a:hover {
+        background-color: rgba(250, 235, 215, 0.3);
+    }
+</style>
