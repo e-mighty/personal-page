@@ -1,34 +1,13 @@
 ---
-import MainPageLayout from "../layouts/MainPageLayout.astro";
-import Card from "../components/Card.astro";
+import Card from "../../components/Card.astro";
 
-import json from "./projects/projects.json";
+import json from "./projects.json";
 const projects = json;
 ---
 
-<MainPageLayout title={"Moin!"}>
-    <!-- Hero-Box -->
-    <div
-        class="w-screen py-20 min-h-screen text-gray-100 bg-gradient-to-b from-indigo-600 via-pink-400"
-    >
-        <div class="text-8xl md:text-9xl font-extrabold text-center">Moin!</div>
-        <img
-            src="/profile-picture.webp"
-            class="w-48 h-48 md:w-64 md:h-64 mx-auto my-24 object-cover rounded-full"
-        />
-        <div
-            class="text-xl md:text-2xl font-semibold mx-7 lg:mx-auto max-w-screen-lg text-center"
-        >
-            My name is <a href="/about-me" class="inline">Erik</a>, I am a
-            coffee lover ☕️, tech enthusiast 💻, <a href="/cv" class="inline"
-                >product owner 👨🏼‍💻</a
-            >, <a href="/projects" class="inline">DIY-guy 🛠</a> and addicted to learning
-            🤓
-        </div>
-        <div class="my-5 text-center">
-            <a class="text-xl">Tell me more</a>
-        </div>
-    </div>
+<body title={"Moin!"}>
+    <a href="/">
+    <h2>back to Start</h2></a>
 
     <!-- What's this about-Box -->
     <div class="lp-area">
@@ -69,7 +48,7 @@ const projects = json;
             Projects
             <a href="/projects"> Show all</a>
         </h2>
-        <p>👀 Check out my current projects:</p>
+        <p>👀 Check out the latest updates of my projects:</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             {
                 projects.map((project) => (
@@ -84,31 +63,6 @@ const projects = json;
     </div>
 
     <hr class="area-seperator" />
-
-    <!-- CV-Overview -->
-
-    <div class="lp-area">
-        <h2 class="inline-block">
-            Professional occupation
-            <a href="/cv">See CV</a>
-        </h2>
-
-        <Card
-            title="Product Owner (modility GmbH)"
-            href="/"
-            body="Modility is the online marketplace for sustainable rail freight. As PO I organize strategy, roadmap and prioritization as well as PRDs, requirements (aka user stories), UX/UI design and QA. On a side note, I've build up and maintain our office IT and support within further administrative functions, i.e. HR & recruiting, procurement and accounting."
-        />
-    </div>
-
-    <hr class="area-seperator" />
-
-    <!-- About me -->
-    <div class="lp-area">
-        <h2 class="inline-block">
-            About me
-            <a href="/about">Get to know me</a>
-        </h2>
-    </div>
 
     <style>
         h2 {
@@ -143,4 +97,4 @@ const projects = json;
             content: " ↗";
         }
     </style>
-</MainPageLayout>
+</body>
